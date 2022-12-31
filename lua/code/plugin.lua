@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 local install_path = vim.fn.stdpath("data") .. '/site/pack/packer/start/packer.nvim' 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 	PACK_BOOTSTARAP = vim.fn.system({
@@ -24,12 +25,22 @@ return require('packer').startup(function(use)
 	use 'pechorin/any-jump.vim'
 -- use 'theniceboy/eleline.vim'
 	use 'neovim/nvim-lspconfig'
+=======
+vim.cmd [[packadd packer.nvim]]
+
+return require('packer').startup(function(use)
+	use 'vim-airline/vim-airline-themes'
+	use 'morhetz/gruvbox'
+	use 'pechorin/any-jump.vim'
+	use 'theniceboy/eleline.vim'
+>>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
 	use 'mbbill/undotree'
 	use 'OmniSharp/omnisharp-vim'
 	use 'jiangmiao/auto-pairs'
 	use 'kevinhwang91/nvim-hlslens'
 	use 'mg979/vim-visual-multi'
 	use 'uiiaoo/java-syntax.vim'
+<<<<<<< HEAD
 	use 'mfussenegger/nvim-jdtls'
 	use 'tpope/vim-commentary'
 	use 'williamboman/nvim-lsp-installer'
@@ -65,4 +76,10 @@ return require('packer').startup(function(use)
 		},
 		tag=nightly
 	}
+=======
+	use 'preservim/nerdtree'
+	use 'mfussenegger/nvim-jdtls'
+	use 'tpope/vim-commentary'
+--	use 'vim-airline/vim-airline'
+>>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
 end)

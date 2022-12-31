@@ -1,4 +1,5 @@
 require("code.config")
+<<<<<<< HEAD
 require('hlslens').setup()
 require'lspconfig'.jdtls.setup{ cmd = {'jdtls'} }
 require("nvim-lsp-installer").setup {}
@@ -46,6 +47,8 @@ require("bufferline").setup{
 }
 
 
+=======
+>>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
 vo.nu = true
 vo.cursorline = true
 vo.rnu = true
@@ -60,7 +63,11 @@ vo.autoindent = true
 vo.ttimeoutlen = 0
 vo.timeout = false
 vo.viewoptions = "cursor,folds,slash,unix"
+<<<<<<< HEAD
 vo.wrap = false
+=======
+vo.wrap = true
+>>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
 vo.backup = false
 vo.swapfile = false
 vo.showmode = false
@@ -68,13 +75,20 @@ vo.autochdir = true
 vo.showcmd = false
 vo.wildmenu = true
 vo.compatible = false
+<<<<<<< HEAD
 vo.shell = "fish -i"
+=======
+vo.shell = "bash -i"
+>>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
 vo.ignorecase = true
 vo.smartcase = true
 vo.shortmess = "c"
 vo.inccommand = "split"
 vo.completeopt = "longest,noinsert,menuone,noselect,preview"
+<<<<<<< HEAD
 vo.termguicolors = true
+=======
+>>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
 
 undotree_DiffAutoOpen = 1
 undotree_SetFocusWhenToggle = 1
@@ -89,6 +103,7 @@ any_jump_window_height_ratio = 0.9
 NERDTreeShowHidden=1
 
 
+<<<<<<< HEAD
 vim.lsp.set_log_level("debug")
 
 local has_words_before = function()
@@ -193,6 +208,8 @@ end
 
 
 
+=======
+>>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
 vim.cmd[[filetype on
 filetype indent on
 filetype plugin on
@@ -204,6 +221,66 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 autocmd BufEnter * silent! lcd %:p:h
 
 
+<<<<<<< HEAD
+=======
+noremap <LEADER>r :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+	exec "w"
+	if &filetype == 'c'
+		set splitbelow
+		:sp
+		:res -5
+		term gcc % -o %< && time ./%<
+	elseif &filetype == 'cpp'
+		set splitbelow
+		exec "!g++ -std=c++11 % -Wall -o %<"
+		:sp
+		:res -15
+		:term ./%<
+	elseif &filetype == 'cs'
+		set splitbelow
+		silent! exec "!mcs %"
+		:sp
+		:res -5
+		:term mono %<.exe
+	elseif &filetype == 'java'
+		set splitbelow
+		:sp
+		:res -5
+		term javac % && time java %<
+	elseif &filetype == 'sh'
+		:!time bash %
+	elseif &filetype == 'python'
+		set splitbelow
+		:sp
+		:term python3 %
+	elseif &filetype == 'html'
+		silent! exec "!".g:mkdp_browser." % &"
+	elseif &filetype == 'markdown'
+		exec "InstantMarkdownPreview"
+	elseif &filetype == 'tex'
+		silent! exec "VimtexStop"
+		silent! exec "VimtexCompile"
+	elseif &filetype == 'dart'
+		exec "CocCommand flutter.run -d ".g:flutter_default_device." ".g:flutter_run_args
+		silent! exec "CocCommand flutter.dev.openDevLog"
+	elseif &filetype == 'javascript'
+		set splitbelow
+		:sp
+		:term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
+	elseif &filetype == 'racket'
+		set splitbelow
+		:sp
+		:res -5
+		term racket %
+	elseif &filetype == 'go'
+		set splitbelow
+		:sp
+		:term go run .
+	endif
+endfunc
+
+>>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
@@ -224,8 +301,13 @@ endif
 
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+<<<<<<< HEAD
 let NERDTreeMenuDown='s'
 let NERDTreeMenuUp='w'
 
 source ~/.config/nvim/run.vim
+=======
+let g:NERDTreeMenuDown='s'
+let g:NERDTreeMenuUp='w'
+>>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
 ]]
