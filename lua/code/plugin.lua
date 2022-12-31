@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
 	use 'kevinhwang91/nvim-hlslens'
 	use 'mg979/vim-visual-multi'
 	use 'uiiaoo/java-syntax.vim'
+	use 'preservim/nerdtree'
 	use 'mfussenegger/nvim-jdtls'
 	use 'tpope/vim-commentary'
 --	use 'vim-airline/vim-airline'
