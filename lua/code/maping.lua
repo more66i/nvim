@@ -1,8 +1,6 @@
 require("code.config")
-
 vg.mapleader = " "
 vg.maplocalleader = " "
-
 map('n','w','k',opt)
 map('v','w','k',opt)
 map('n','a','h',opt)
@@ -29,10 +27,8 @@ map('n','<LEADER>dd',':set splitright<CR>:vsplit<CR>',{noremap = true})
 map('n','<LEADER>da',':set splitright<CR>:vsplit<CR>',{noremap = true})
 map('n','<LEADER>dw',':set nosplitbelow<CR>:split<CR>',{noremap = true})
 map('n','<LEADER>ds',':set splitbelow<CR>:split<CR>',{noremap = true})
-<<<<<<< HEAD
 map('n','<leader>pi',':PackerInstall<CR>',{noremap = true})
-=======
->>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
+map('n','<leader>pi',':PackerInstall<CR>',{noremap = true})
 map('n','<LEADER>n','Nzz',opt)
 map('n','bc','bcw',opt)
 map('n','n','nzz',opt)
@@ -43,10 +39,8 @@ map('n','ms','<C-w>j',opt)
 map('n','ta',':-tabnext<CR>',opt)
 map('n','td',':+tabnext<CR>',opt)
 map('n','tt',':tabe<CR>',opt)
-<<<<<<< HEAD
 map('n','lt',':bdelete<CR>',opt)
-=======
->>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
+map('n','lt',':bdelete<CR>',opt)
 map('n','te',':terminal<CR>',opt)
 map('n','R',':source  %<CR>', {noremap = true})
 map("n", "<A-o>", "<cmd>lua require'jdtls'.organize_imports()<CR>", opt)
@@ -54,19 +48,16 @@ map('n','<up>',':res +5<CR>',opt)
 map('n','<down>',':res -5<CR>',opt)
 map('n','<left>',':vertical resize-5<CR>',opt)
 map('n','<right>',':vertical resize+5<CR>',opt)
-<<<<<<< HEAD
 map('n','hh',':UndotreeToggle<CR>',opt)
 map('n','<LEADER>j',':AnyJump<CR>',opt)
 map('n','tf',':NvimTreeToggle<CR>',opt)
 map('n','th',':NvimTreeFindFile<CR>',opt)
 map('n','<LEADER><CR>',':noh<CR>',{silent = true})
 -- lsp configure
-
 msp('n', '<LEADER>e', vim.diagnostic.open_float, opts)
 msp('n', '[d', vim.diagnostic.goto_prev, opts)
 msp('n', ']d', vim.diagnostic.goto_next, opts)
 msp('n', '<LEADER>q', vim.diagnostic.setloclist, opts)
-
 msp('n', 'gD', vim.lsp.buf.declaration, bufopts)
 msp('n', 'gd', vim.lsp.buf.definition, bufopts)
 msp('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -77,11 +68,8 @@ msp('n', '<LEADER>rn', vim.lsp.buf.rename, bufopts)
 msp('n', '<LEADER>ca', vim.lsp.buf.code_action, bufopts)
 msp('n', 'gr', vim.lsp.buf.references, bufopts)
 msp('n', '<LEADER>f', function() vim.lsp.buf.format { async = true } end, bufopts)
-=======
-
 map('n','hh',':UndotreeToggle<CR>',opt)
 map('n','<LEADER>j',':AnyJump<CR>',opt)
 map('n','nt',':NERDTree<CR>',opt)
 map('n','tf',':NERDTreeToggle<CR>',opt)
 map('n','th',':NERDTreeFind<CR>',opt)
->>>>>>> 44bdc6891bc2f264f148319c72ee6b0327201e8a
