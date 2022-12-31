@@ -3,7 +3,6 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	use 'vim-airline/vim-airline-themes'
 	use 'morhetz/gruvbox'
-	use 'itchyny/vim-cursorword'
 	use 'pechorin/any-jump.vim'
 	use 'theniceboy/eleline.vim'
 	use 'mbbill/undotree'
@@ -13,5 +12,6 @@ return require('packer').startup(function(use)
 	use 'mg979/vim-visual-multi'
 	use 'uiiaoo/java-syntax.vim'
 	use 'mfussenegger/nvim-jdtls'
+	use 'tpope/vim-commentary'
 --	use 'vim-airline/vim-airline'
 end)
