@@ -132,4 +132,3 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 let g:NERDTreeMenuDown='s'
 let g:NERDTreeMenuUp='w'
 ]]
-vim.api.nvim_set_hl(0, "@foo.bar", { link = "Identifier" })

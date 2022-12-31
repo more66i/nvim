@@ -1,5 +1,3 @@
-opts = {silent = true, normal = true}
-
 main_init = "~/.config/nvim/init.lua"
 vo = vim.opt
 vg = vim.g
